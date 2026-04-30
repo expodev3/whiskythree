@@ -1,1 +1,193 @@
-a
+
+<!--
+<html>
+<head></head>
+<body bgColor='gray'>
+
+jxhdh
+<br>
+jdjshd
+
+<script>
+document.body.innerHTML+='jdhdh';
+</script>
+</body>
+</html-->
+
+
+
+
+
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width">
+<style>
+body{font-size:20px;white-space:no-wrap;}
+.input{display:inline-block;white-space:nowrap;max-width:100%}
+.dropbtn{background-color:#eee;color:#000000;outline:solid 1px gray;
+padding:10px 10px;margin:0px;
+border:none}
+.dropdown{position:relative;display:inline-block}
+.dropdown-content{display:none;position:absolute;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px rgba(0,0,0,0.2);z-index:1;}
+.dropdown-content a{color:#000;
+padding:1px 1px;text-decoration:none;display:block}
+.dropdown-content a:hover{background-color:#ddd}
+.dropdown:hover .dropdown-content{display:block}
+.dropdown:hover .dropbtn{background-color:#3e8e41}
+</style>
+</head>
+<body bgColor='gray'>
+<script>
+
+style='style="color:black;background-color:#eeeeee;outline:line 1px gray;width:100px;"';
+
+ID=function(v){return document.getElementById(v);}
+LINE=function(v){document.body.innerHTML+=(v);}
+DATE=function(){const today = new Date();const month = today.toLocaleString('en-US', { month: 'long' });const day = today.getDate();const year = today.getFullYear();const formatted = `${month}, ${day}, ${year}`;return formatted.toUpperCase();}
+
+holderr='';
+ADDEDT=function(v,arr){
+arr=arr.split(',');
+str2='';
+for(var i=0;i<arr.length;i++){
+str2+=('<a href="#" onclick="document.getElementById(`'+v+'`).value=`'+(arr[i])+'`;">'+(arr[i])+'</a>');
+}
+str='*'+(v)+':* <div class="dropdown"><input class="dropbtn" style="display:inline-block;white-space:nowrap;max-width:100%;" id="'+(v)+'" value="'+holderr+'"></button><div class="dropdown-content">'+(str2)+'</div></div>';//str=str.replace(/[\r\n]+/gm, "");
+document.body.innerHTML+=str;
+}
+ADDBTN=function(v,arr){
+arr=arr.split(',');
+str2='';
+for(var i=0;i<arr.length;i++){
+str2+=('<a href="#" onclick="document.getElementById(`'+v+'`).innerHTML=`'+(arr[i])+'`;">'+(arr[i])+'</a>');
+}
+str='*'+(v)+':* <div class="dropdown"><button class="dropbtn" style="display:inline-block;white-space:nowrap;max-width:100%;" id="'+(v)+'" >'+holderr+'</button><div class="dropdown-content">'+(str2)+'</div></div>';//str=str.replace(/[\r\n]+/gm, "");
+document.body.innerHTML+=str;
+}
+var add00=0;
+ADDB=function(arr){add00++;
+v='add00'+add00;
+arr=arr.split(',');
+str='';
+for(var i=0;i<arr.length;i++){
+str+='<a href="#" onclick="document.getElementById(`'+v+'`).innerHTML=`'+arr[i]+'`;">'+arr[i]+'</a>';
+}
+document.body.innerHTML+='<div class="dropdown"><button class="dropbtn" id="'+v+'">'+holderr+'</button><div class="dropdown-content">'+str+'</div></div>';
+}
+
+data=`
+DAU 8523_MR DIY_3664021-022_CATAMORA/AMASTACIO,
+DAZ 5593_MR DIY_3676304-305_OBLINO/ESPANOL/GERALDO,
+CBS 4846_MOVE 8_3753620?_VILLALON/,
+CBS 4648_MOVE 8_3756388_CATIGON/,
+CBR 7885_SEANACHI_3756035_LADIO/,
+CBN 8430_SEANACHI_3755340_MAGISTRADO/,
+CCK 9824_SEANACHI_3759255_PULGA/,
+CCE 6237_SEANACHI_37566437?3710337??_MAGSAYO/,
+CCE 6566_SEANACHI_3756293_ICAYAN/,
+NAW 9750_SEANACHI_3758851_STA. IGLESIA/,
+DAP 1673_MR. DIY_37355939?_ESTRELLA/GEDA,
+MGE 643_SEANACHI_3741860?_ORTIZ/,
+CCR 9598_MR. DIY_3756140?_CATAMORA/
+`;
+var plates='';
+for(var i=0;i<data.split(',').length;i++){
+plates+=data.split(',')[i].split('_')[0];
+if(i!=data.split(',').length-1){plates+=',';}
+}
+plates = plates.replace(/[\r\n]+/gm, "");
+var seals='';
+for(var i=0;i<data.split(',').length;i++){
+seals+=data.split(',')[i].split('_')[2];
+if(i!=data.split(',').length-1){seals+='/,';}
+}
+seals = seals.replace(/[\r\n]+/gm, "");
+var drivers='OBLINO,CATAMORA,GONOWON,PULGA,GERALDO,LADIO,ESPA&#209OL,MAGISTRADO,MAGSAYO,CATIGON,VILLALON,AMASTACIO,STA. IGLESIA,ICAYAN,RAGAS'
+
+
+
+
+LINE(`
+*HAPPY MR DIY DAY*<br>
+*MA'AM/SIR &#129761;*<br>`);
+ADDB(`*DAYSHIFT*,*NIGHTSHIFT*`)
+LINE('<br>');
+LINE(`*OUTBOUND WH 3&4*<br>`);
+dt=DATE().split(',');
+LINE(`*${dt[0]},`);
+//LINE(`${dt[1]}`);
+ADDB(`1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31`)
+
+
+LINE(`,${dt[2]}*`);
+
+LINE('<br>');
+LINE('<br>');
+
+//LINE('*TIME IN:*   <input unselectable="on" type="time" '+style+'>');
+LINE('*TIME IN:* ');
+ADDB('06,07,08,09,10,11,12,13,14,15,16,17,18,_,19,20,21,22,23,24,00,01,02,03,04,05');
+ADDB('0,1,2,3,4,5,6');
+ADDB('0,1,2,3,4,5,6,7,8,9');
+LINE('HH');
+LINE('<br>');
+LINE('*TIME OUT:* ');
+ADDB('06,07,08,09,10,11,12,13,14,15,16,17,18,_,19,20,21,22,23,24,00,01,02,03,04,05');
+ADDB('0,1,2,3,4,5,6');
+ADDB('0,1,2,3,4,5,6,7,8,9');
+LINE('HH');
+LINE('<br>');
+LINE('<br>');
+LINE('*TRANSFER*<br>');
+ADDBTN('FROM','TONIVIC PHASE1,TONIVIC PHASE2,OVERFLOW,DASMA WH,WELBORNE WH');
+LINE('<br>');
+ADDBTN('TO','TONIVIC PHASE1,TONIVIC PHASE2,OVERFLOW,DASMA WH,WELBORNE WH');
+LINE('<br>');
+LINE('<br>');////////////////
+ADDBTN('TRUCKING','MR DIY,SEANACHI,MOVE 8');
+LINE('<br>');
+ADDBTN('PLATE#',plates);//'DAU 8523,DAZ 5593,CBS 4846,CBS 4648,CBR 7885,CBN 8430,CCK 9824,CCE 6237,NAW 9750');
+LINE('<br>');
+ADDBTN('DRIVER',drivers);//'OBLINO,CATAMORA,GONOWON,PULGA,GERALDO,LADIO,ESPA?OL,MAGISTRADO,MAGSAYO,CATIGON,VILLALON,AMASTACIO,STA. IGLESIA,ICAYAN,RAGAS');
+LINE('<br>');
+LINE('<br>');////////////////
+ADDBTN('SEAL',seals);
+LINE('<input value="1160----">');
+LINE('<br>');
+/*
+for(var i=0;i<8;i++){ADDB('1,2,3,4,5,6,7,8,9,0');}
+LINE('-');
+for(var i=0;i<8;i++){ADDB('1,2,3,4,5,6,7,8,9,0');}
+LINE('<br>');*/
+ADDBTN('PALLETS','17,16,15,14,13,12,10,9,8,7,6,5,4');
+LINE('<br>');
+LINE('*BOXES:* ');
+ADDB('1,2,3,4,5,6,7,8,9,0');
+ADDB('1,2,3,4,5,6,7,8,9,0');
+ADDB('1,2,3,4,5,6,7,8,9,0');
+LINE('<br>');
+LINE('<br>');////////////////
+ADDBTN('CHECKER','L.MATA,G. BISMAR,F. RAMOS,R. SABIO,J. GOITE,A. SARSONN,G. MANANQUIL,A. PEROLA,F. VISCA,DE GUZMAN,B. TOLENTINO,');
+LINE('<br>');
+ADDBTN('REPORTED BY','ABELLANA, ALIBOSO, ATENCIO, BALOCA, CABANIG, CONDINO, CUSTOSA, DIONISIO, FRANCIA, GUNDAYAO, ILAO, JUNGAYA, JURALBAL, MAMACOL, OLARTE, OLIT, PISALBON, PIZARRA, RIOS, RIVERA, SAGUN, SALIVI, TABUDLONG, VIRATA');
+LINE('<div style="height:700px;">');
+
+/*
+function COPYALL() {
+  navigator.clipboard.writeText(document.body.innerText);
+}
+LINE(`
+<button onclick='COPYALL();'>COPY TEXT</button>
+`);
+*/
+
+
+
+/*
+LINE(`<img id='pic1' width='80px' height='80px' srcc='CATAMORA.jpg'/>`);
+LINE(`<img id='pic2' width='80px' height='80px' srcc='CATAMORA.jpg'/>`);
+ */
+
+document.body.innerHTML+=data;
+</script>
+
+</body>
+</html>
